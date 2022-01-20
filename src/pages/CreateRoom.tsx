@@ -2,11 +2,13 @@ import { Link } from 'react-router-dom';
 
 import illustrationImg from '../assets/illustration.svg'
 import logoImg from '../assets/logo.svg';
+import { Button } from '../components/Button';
+import { useAuth } from '../hooks/useAuth';
 
 import '../styles/auth.scss';
-import { Button } from '../components/Button';
 
 export function CreateRoom(){
+    const { user } = useAuth();
 
     return (
         <div id="page-auth">
