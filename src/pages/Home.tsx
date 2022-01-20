@@ -10,7 +10,6 @@ import { database } from '../services/firebase';
 
 import '../styles/auth.scss';
 
-
 export function Home(){
   let navigate = useNavigate();
   let { signInGoogle, user } = useAuth();
@@ -53,7 +52,6 @@ export function Home(){
         <strong>Crie salas de Q&amp;A ao-vivo</strong>
         <p>Tire as dúvidas da sua audiência em tempo-real</p>
       </aside>
-
       <main>
         <div className="main-content">
           <img src={logoImg} alt="Letmeask" />
@@ -75,7 +73,6 @@ export function Home(){
           </form>
         </div>
       </main>
-
     </div>
   )
 }
