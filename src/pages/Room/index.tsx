@@ -1,16 +1,16 @@
 import { FormEvent, useState } from 'react';
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
-import logoImg from '../assets/logo.svg';
+import logoImg from '../../assets/logo.png';
 
-import { Button } from '../components/Button';
-import { Question } from '../components/Questions';
-import { RoomCode } from '../components/RoomCode';
-import { useAuth } from '../hooks/useAuth';
-import { useRoomData } from '../hooks/useRoomData';
-import { database } from '../services/firebase';
+import { Button } from '../../components/Button';
+import { Question } from '../../components/Questions';
+import { RoomCode } from '../../components/RoomCode';
+import { useAuth } from '../../hooks/useAuth';
+import { useRoomData } from '../../hooks/useRoomData';
+import { database } from '../../services/firebase';
 
-import '../styles/room.scss';
+import './styles.scss';
 
 type RoomType = {
   id: string;
@@ -18,6 +18,7 @@ type RoomType = {
 
 export function Room()
 {
+  let navigate = useNavigate();
   const { user } = useAuth();
   const params = useParams<RoomType>();
   const roomId = params.id;
@@ -92,11 +93,16 @@ export function Room()
     )
   }
   
+  function navigateToHome()
+  {
+    navigate('/');
+  }
+
   return(
     <div id="page-room">
       <header>
         <div className="content">
-          <img src={logoImg} alt="logo" />
+          <img src={logoImg} alt="logo" onClick={navigateToHome}  />
           <RoomCode code={roomId!}/>
         </div>
       </header>
@@ -123,7 +129,7 @@ export function Room()
             ) : (
               <span>Para enviar uma pergunta, <button>faça seu login</button>.</span>
             ) }
-            <Button type="submit" disabled={!user}>Enviar pergunta</Button>
+            <Button type="submit" disabled={!user} style={ { height: 40 }}>Enviar pergunta</Button>
           </div>
         </form>
 

@@ -1,17 +1,17 @@
 .question {
   background: #fefefe;
   border-radius: 8px;
-  border: 1px solid #d2c3ff;
+  border: 1px solid #00c4a6  ;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   padding: 24px;
 
   & + .question {
-    margin-top: 8px;
+    margin-top: 20px;
   }
   
   &.highlighted {
-    background: #F4F0FF;
-    border: 2px solid #835AFD;
+    background: #e9fcf9;
+    border: 1px solid #00c4a6;
     
     footer .user-info span {
       color: #29292E;
@@ -20,6 +20,7 @@
   
   &.answered {
     background: #DBDCDD;
+    border: 1px solid #949494;
   }
 
   p {
@@ -67,17 +68,17 @@
         gap: 8px;
 
         &.liked {
-          color: #835afd;
+          color: #00ad93;
 
           svg path {
-            stroke: #835afd;
-            fill: #ccbbff;
+            stroke: #00ad93;
+            fill: #a0ffda;
           }
         }
       }
 
       &:hover {
-        filter: brightness(0.7);
+        filter: brightness(0.85);
       }
     }
   }

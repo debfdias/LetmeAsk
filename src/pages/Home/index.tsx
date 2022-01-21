@@ -1,14 +1,14 @@
 import { FormEvent, useState } from 'react';
 import { useNavigate  } from 'react-router-dom';
 
-import illustrationImg from '../assets/illustration.svg'
-import logoImg from '../assets/logo.svg';
-import googleIconImg from '../assets/google-icon.svg';
-import { Button } from '../components/Button';
-import { useAuth } from '../hooks/useAuth';
-import { database } from '../services/firebase';
+import illustrationImg from '../../assets/illustration.png'
+import logoImg from '../../assets/logo.png';
+import googleIconImg from '../../assets/google_icon.png';
+import { Button } from '../../components/Button';
+import { useAuth } from '../../hooks/useAuth';
+import { database } from '../../services/firebase';
 
-import '../styles/auth.scss';
+import './styles.scss';
 
 export function Home(){
   let navigate = useNavigate();
@@ -49,14 +49,14 @@ export function Home(){
     <div id="page-auth">
       <aside>
         <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" />
-        <strong>Crie salas de Q&amp;A ao-vivo</strong>
-        <p>Tire as dúvidas da sua audiência em tempo-real</p>
+        <strong>Crie, pergunte e responda já!</strong>
+        <p>Tire as dúvidas da sua audiência em tempo-real.</p>
       </aside>
       <main>
         <div className="main-content">
           <img src={logoImg} alt="Letmeask" />
           <button onClick={handleCreateRoom} className='create-room'>
-            <img src={googleIconImg} alt="Logo do Google" />
+            <img src={googleIconImg} alt="Logo do Google" style={ {height: 24}} />
             Crie sua sala com o Google
           </button>
           <div className='line'>ou entre em uma sala</div>
