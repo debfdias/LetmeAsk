@@ -14,14 +14,14 @@ This project was developed using the following tools:
 
 ## :gear: How to run 
 
-Edit your database credentials in .ENV file.
-
 ```
 git clone https://github.com/debfdias/PerguntaAi
 cd PerguntaAi
 yarn install
 yarn start
 ```
+
+** Create a Firebase project and edit your own database credentials in .ENV file.
 
 Go to your browser and access http://localhost:3000
 
