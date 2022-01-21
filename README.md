@@ -1,5 +1,9 @@
 # Pergunta aí!
 
+<h1 align="center">
+    <img alt="Perguntaai" src="cover.png" />
+</h1>
+
 ## 💻 Project
 
 Pergunta aí! is a real time application to create rooms and share questions with other users. Authentication through google is required. 
